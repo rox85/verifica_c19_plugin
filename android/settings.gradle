@@ -1,0 +1,6 @@
+include ':app'
+include ':dgc-sdk'
+include ':decoder'
+rootProject.name = 'verifica_c19_plugin'
+project(':dgc-sdk').projectDir = new File("./libs/it-dgc-verificac19-sdk-android/sdk")
+project(':decoder').projectDir = new File("./libs/dgca-app-core-android/decoder")
