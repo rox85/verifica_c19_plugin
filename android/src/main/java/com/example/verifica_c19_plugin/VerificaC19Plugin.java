@@ -7,11 +7,10 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
+import it.ministerodellasalute.verificaC19sdk.worker.LoadKeysWorker;
 
 
-/// TODO ------ importazione libreria ministero della salute ?????
-//import it.ministerodellasalute.verificaC19sdk.worker.LoadKeysWorker;
-
+import java.it.ministerodellasalute.verificaC19sdk.worker.*;
 
 
 /** VerificaC19Plugin */
@@ -31,6 +30,10 @@ public class VerificaC19Plugin implements FlutterPlugin, MethodCallHandler {
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("getPlatformVersion")) {
+
+      
+
+
       result.success("Android " + android.os.Build.VERSION.RELEASE);
     } else {
       result.notImplemented();

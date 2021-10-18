@@ -5,6 +5,10 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        // added `libs` as dependency location
+        flatDir {
+            dirs 'libs'
+        }
     }
 
     dependencies {
@@ -31,5 +35,13 @@ android {
 
     defaultConfig {
         minSdkVersion 16
+    }
+
+    sourceSets {
+        main.java.srcDirs += [
+            './libs/dgca-app-core-android/decoder/src/main',
+            './libs/dgc-certlogic-android-main/engine/src/main',
+            './libs/it-dgc-verificac19-sdk-android-develop/sdk/src/main',
+        ]
     }
 }
